@@ -5,14 +5,15 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
   const employeesArray = [];
-
-  while (window.confirm("Do you want to add another employee information?")) {
+  let CONTINUE = true; // will check if employer want to add more employee info
+  while (CONTINUE) {
     const employeeData = {
       firstName: window.prompt("Enter the first name."), 
       lastName: window.prompt("Enter the last name."),
       salary: parseInt(window.prompt("Enter your salary."), 10), // parseInt convert string to a number in base 10
     };
     employeesArray.push(employeeData);
+    CONTINUE = window.confirm("Do you want to add another employee information?");
   }
 
   for (let i = 0; i < employeesArray.length; i++) {
