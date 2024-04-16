@@ -33,7 +33,6 @@ const displayAverageSalary = function(employeesArray) {
 
   for (let i = 0; i < len; i++) {
     sumSalary += employeesArray[i].salary;
-    console.log(sumSalary);
   }
   const aveSalary = sumSalary / len;
   console.log(`The average employee salary between out ${len} employee(s) is: ${aveSalary}`);
